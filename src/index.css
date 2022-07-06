@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: whitesmoke;
 }
 
 code {
@@ -26,7 +28,6 @@ code {
 .Header{
   display: flex;
   justify-content: space-around;
-  background-color: black;
   align-items: center;
 }
 
@@ -34,4 +35,8 @@ code {
   margin-top: 1em;
   width: 25%;
   height: 60%;
+}
+
+.footer{
+  
 }
