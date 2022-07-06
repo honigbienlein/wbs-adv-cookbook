@@ -5,11 +5,11 @@ import './index.css';
 function Footer () {
 
     return (
-        <section className="footer">
+        <footer className="footer">
          <section className="footer-legalrequirements">
             Legal Requirements
          </section>    
-        </section>
+        </footer>
     )
 
 }

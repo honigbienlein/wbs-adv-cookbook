@@ -1,8 +1,9 @@
 import './App.css';
-import { Footer } from './Footer'
+import "./index.css";
+import Footer from './Footer.js';
 import Header from './Header.js';
 
-import "./index.css";
+
 
 function App() {
   return (
