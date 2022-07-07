@@ -11,9 +11,7 @@ export default function Tags({tags=null}){
     return(
         <div className="tags">
             {/* Option: 2 in a row */} 
-            <Link className="tagElement">
-                {tags.map((tag) => <li>{tag}</li>)}
-            </Link>
+            {tags.map((tag) => <Link className="tagElement">{tag}</Link>)}
         </div>
     )
 }
