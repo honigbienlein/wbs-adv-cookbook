@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header>
         <img alt="logoCookbook" className="logo" src={ require('./images/logo.png') } />
-        <Route path="" element={<Search />} />
+        {/* <Route path="" element={<Search />} /> */}
         <img alt="userProfile" className="profile" src={ require('./images/userProfile.png') } /> 
       </header>
       
