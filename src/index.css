@@ -37,6 +37,6 @@ code {
   height: 60%;
 }
 
-.footer{
-  
+.main{
+  display: flex;
 }

@@ -1,18 +1,13 @@
 import React from 'react';
 
-import './index.css';
-
-function Footer () {
+export default function Footer () {
 
     return (
         <footer className="footer">
-         <section className="footer-legalrequirements">
+         <section className="footer-legal-requirements">
             Legal Requirements
          </section>    
         </footer>
     )
 
 }
-
-
-export default Footer;
