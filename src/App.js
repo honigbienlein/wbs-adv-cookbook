@@ -1,32 +1,35 @@
-import './App.css';
-import "./index.css";
-import Footer from './Footer.js';
-import Header from './Search.js';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
+import Footer from './Footer.js';
 import Tags from './Tags';
 import Authors from './Authors';
+import Search from './Search.js';
 
+import "./index.css";
+import LandingPage from './LandingPage.js';
 
-
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header>
+      
+      <header className="Header">
         <img alt="logoCookbook" className="logo" src={ require('./images/logo.png') } />
-        {/* <Route path="" element={<Search />} /> */}
+        <Search />
         <img alt="userProfile" className="profile" src={ require('./images/userProfile.png') } /> 
       </header>
       
-      <main>
+      <main className='main'>
         <Tags />
         <Routes>
           {/* <Route path="/authors" element={<Authors />} */}
+          <Route path='/' element={<LandingPage />} />
         </Routes>
         <Authors />
       </main>
+      
       <Footer /> 
+    
     </div>
   );
 }
-
-export default App;
