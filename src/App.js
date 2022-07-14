@@ -5,6 +5,10 @@ import Footer from './Footer.js';
 import Tags from './Tags';
 import Authors from './Authors';
 import Search from './Search.js';
+import Legal from './Legal.js';
+import PrivacyPolicy from './PrivacyPolicy.js';
+import TermsOfUse from './TermsOfUse.js';
+
 
 import "./index.css";
 import LandingPage from './LandingPage.js';
@@ -29,6 +33,9 @@ export default function App() {
       </main>
       
       <Footer />
+      <Legal />
+      <PrivacyPolicy />
+      <TermsOfUse />
     
     </div>
   );
