@@ -28,7 +28,7 @@ export default function App() {
         <Authors />
       </main>
       
-      <Footer /> 
+      <Footer />
     
     </div>
   );

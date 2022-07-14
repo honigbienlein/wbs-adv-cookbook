@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default function TermOfUSe () {
+export default function TermsOfUSe () {
