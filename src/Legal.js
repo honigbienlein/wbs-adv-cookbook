@@ -1,5 +1,4 @@
-import React from 'react';n
-
+import React from 'react';
 
 export default function Legal () {
 
