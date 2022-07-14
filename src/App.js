@@ -10,26 +10,26 @@ import "./index.css";
 import LandingPage from './LandingPage.js';
 
 export default function App() {
-  return (
-    <div className="App">
-      
-      <header className="Header">
-        <img alt="logoCookbook" className="logo" src={ require('./images/logo.png') } />
-        <Search />
-        <img alt="userProfile" className="profile" src={ require('./images/userProfile.png') } /> 
-      </header>
-      
-      <main className='main'>
-        <Tags />
-        <Routes>
-          {/* <Route path="/authors" element={<Authors />} */}
-          <Route path='/' element={<LandingPage />} />
-        </Routes>
-        <Authors />
-      </main>
-      
-      <Footer /> 
-    
-    </div>
-  );
+    return (
+        <div className="App">
+
+            <header className="Header">
+                <img alt="logoCookbook" className="logo" src={ require('./images/logo.png') } />
+                <Search />
+                <img alt="userProfile" className="profile" src={ require('./images/userProfile.png') } />
+            </header>
+
+            <main className='main'>
+                <Tags />
+                <Routes>
+                    {/* <Route path="/authors" element={<Authors />} */}
+                    <Route path='/' element={<LandingPage />} />
+                </Routes>
+                <Authors />
+            </main>
+
+            <Footer />
+
+        </div>
+    );
 }

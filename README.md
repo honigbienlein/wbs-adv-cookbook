@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+NAME DES STREAMS: WBS-Adv-CookBook
+STREAM-URL: https://honigbienlein.github.io/wbs-adv-cookbook/
+STREAM-ID: 3837328837
+MESS-ID: G-ZWMSJW3SKN
