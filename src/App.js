@@ -1,12 +1,13 @@
+// React
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
+// Style
+import "./index.css";
+// Components
 import Footer from './Footer.js';
 import Tags from './Tags';
 import Authors from './Authors';
 import Search from './Search.js';
-
-import "./index.css";
 import LandingPage from './LandingPage.js';
 
 export default function App() {
