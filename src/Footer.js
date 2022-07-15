@@ -5,7 +5,6 @@ export default function Footer () {
 
     return (
         <footer className="footer">
-
           <div className="footer-link-legal">
           <Link to='/legal'>Legal</Link>
           </div>
@@ -21,7 +20,6 @@ export default function Footer () {
           <div className="footer-copyright">
             Copyright © 2022 Community Cookbook. All rights reserved.
           </div>    
-           
         </footer>
     )
 
