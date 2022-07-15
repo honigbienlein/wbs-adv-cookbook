@@ -5,15 +5,15 @@ export default function Legal () {
 
     return (
             <div>
-                <ul>
-                    <li>
-                        <Link to='/legal/privacy'>Privacy Policy</Link>
-                    </li>
-                    
-                    <li>
-                         <Link to='/legal/terms'>Terms Of Use</Link>
-                    </li>
-                </ul>
+                <div>
+                    <div>
+                        <Link to='/legal/privacy'className="link-legal">Privacy Policy</Link>
+                    </div>
+
+                    <div>
+                         <Link to='/legal/terms'className="link-legal">Terms of Use</Link>
+                    </div>
+                </div>
             </div>  
 
     )
