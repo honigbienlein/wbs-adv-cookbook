@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Authors(){
 
@@ -11,7 +11,7 @@ export default function Authors(){
     });
     // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
     const [authors, setAuthors] = useState([]);
-    if(authors.length == 0){
+    if(authors.length === 0){
         client
         .getEntries()
         .then( (res) =>{
@@ -20,6 +20,7 @@ export default function Authors(){
                 if(item.fields&&item.fields.nickname) {
                     return item;
                 }
+                return null
             })
             setAuthors(authorsList);
         }
