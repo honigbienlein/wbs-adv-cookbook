@@ -11,19 +11,21 @@ export default function Authors(){
     });
     // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
     const [authors, setAuthors] = useState([]);
-    client
+    if(authors.length == 0){
+        client
         .getEntries()
         .then( (res) =>{
             //console.log(res);
-            const authors = res.items.filter((item) => {
+            const authorsList= res.items.filter((item) => {
                 if(item.fields.hasOwnProperty('nickname')) {
-                    return setAuthors(item);
+                    return item;
                 }
             })
+            setAuthors(authorsList);
         }
         )
     .catch(err => console.log(err));    
-
+    }
     console.log(authors);
 
     return(
@@ -33,9 +35,8 @@ export default function Authors(){
                 {(authors.length > 0) ? 
                 authors.map((author) => (
                     <li>
-                        {/* <img src={author.fields.profilePicture.fields.file.url} alt="profilePicture"/>
-                        <p>{author.fields.nickname}</p> */}
-                        <p>it works</p>
+                        {/* <img src={author.fields.profilePicture.fields.file.url} alt="profilePicture"/> */}
+                        <p>{author.fields.nickname}</p> 
                     </li>
                 )) 
                 : ''}
