@@ -12,8 +12,8 @@ export default function Search(){
     
     return(
     
-        
-        <input className="SearchBar" type="text" value={search}></input>
+        ''
+        //<input className="SearchBar" type="text" value={search}></input>
   
     )
 }

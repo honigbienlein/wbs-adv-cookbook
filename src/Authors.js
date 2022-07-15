@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Authors(){
 
@@ -11,22 +11,22 @@ export default function Authors(){
     });
     // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
     const [authors, setAuthors] = useState([]);
-    if(authors.length == 0){
+    if(authors.length === 0){
         client
         .getEntries()
         .then( (res) =>{
             //console.log(res);
             const authorsList= res.items.filter((item) => {
-                if(item.fields?.nickname) {
+                if(item.fields&&item.fields.nickname) {
                     return item;
                 }
+                return null
             })
             setAuthors(authorsList);
         }
         )
     .catch(err => console.log(err));    
     }
-    console.log(authors);
 
     return(
         <div className="authors">
@@ -36,7 +36,7 @@ export default function Authors(){
                 authors.map((author, index) => 
                     (<div className="author" key={index}>
                         <p className="nickname">{author.fields.nickname}</p>
-                        <img src={author.fields.profilePicture.fields?.file.url} alt="profilePicture" width="40px" height="40px"/>
+                        <img src={author.fields.profilePicture.fields&&author.fields.profilePicture.fields.file.url} alt="profilePicture" width="40px" height="40px"/>
                     </div>)
                     ) 
                 : ''}
