@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Button, Card } from 'react-bootstrap';
 
 export default function LandingPage() {
 
@@ -34,37 +33,18 @@ export default function LandingPage() {
     <div className="recipes">
       <h3>Just delicious</h3>
       <div className="recipeList">
-                {(recipes.length > 0) ? 
-                recipes.map((recipe, index) => 
-                    (<Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={recipe.fields.picture[0]&&recipe.fields.picture[0].fields.file.url} />
-                    <Card.Body>
-                      <Card.Title>{recipe.fields.recipeName}</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go to recipe</Button>
-                    </Card.Body>
-                  </Card>
-                    
-                    
-                    
-                    
-/*                     <div className="recipe" key={index}>
-                      <div className="card">
-                        <img src={recipe.fields.picture[0]&&recipe.fields.picture[0].fields.file.url} className="card-img-top" alt="recipePicture" width="150px" height="110px" />
-                        <div className="card-body">
-                          <h5 className="card-title">{recipe.fields.recipeName}</h5>
-                          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" className="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div> */
-                    )
-                    ) 
-                : ''}
-            </div>
+        {(recipes.length > 0) ? 
+          recipes.map((recipe, index) => (
+            <Card className="card">
+              <Card.Img variant="top" src={recipe.fields.picture[0]&&recipe.fields.picture[0].fields.file.url} />
+              <Card.Body>
+                <Card.Title className="title">{recipe.fields.recipeName}</Card.Title>
+                <Button className="button" variant="primary">Go to recipe</Button>
+              </Card.Body>
+            </Card>
+            )) 
+        : ''}
+      </div>
     </div>
   )
 }
