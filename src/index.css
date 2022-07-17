@@ -90,6 +90,7 @@ text-align: center;
   justify-content: center;
   align-items: center;
 }
+
 .author{
   display: flex;
   margin: 1rem;
