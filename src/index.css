@@ -39,7 +39,8 @@ code {
 
 .main{
   display: flex;
-
+  width: 100%;
+  justify-content: space-between;
 }
 
 .tags{
@@ -88,4 +89,17 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.author{
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+.authors{
+  width: 20%;
+  margin-right: 2rem;
+  margin-top: 5rem;
+  text-align: center;
 }
