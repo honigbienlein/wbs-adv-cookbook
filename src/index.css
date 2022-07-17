@@ -57,7 +57,6 @@ code {
   display:inline-block;
 }
 
-<<<<<<< HEAD
 .footer{
  margin: auto;
  width: 1080px;
@@ -91,7 +90,6 @@ text-align: center;
   justify-content: center;
   align-items: center;
 }
-=======
 .author{
   display: flex;
   margin: 1rem;
@@ -104,4 +102,3 @@ text-align: center;
   margin-top: 5rem;
   text-align: center;
 }
->>>>>>> 06537589342f75732faa51650ab8f3b776b14524
