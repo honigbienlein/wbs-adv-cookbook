@@ -57,6 +57,40 @@ code {
   display:inline-block;
 }
 
+.footer{
+ margin: auto;
+ width: 1080px;
+}
+
+.link-footer{
+  font-size: 0.7rem;
+  color: grey;
+  text-decoration: none;
+  margin: 1rem 0.3rem;
+}
+
+.footer-copyright{
+font-size: 0.5rem;
+color: red;
+text-align: center;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .link-legal{
+  font-size: 3rem;
+  color: grey;
+  text-decoration: none;
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .author{
   display: flex;
   margin: 1rem;
