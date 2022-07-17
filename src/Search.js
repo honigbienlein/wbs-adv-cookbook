@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import "./index.css";
+import LandingPage from './LandingPage';
 
 export default function Search(){
+    const [input, setInput] = useState('');
     
-    function search(){
+    const search = (event) =>{
+        const input = event.target.value;
+        setInput(input);
+    };
 
-        // api suche search
-    }
-    
-    
     return(
-    
-        ''
-        //<input className="SearchBar" type="text" value={search}></input>
-  
+        <>
+            <input className="SearchBar" type="text" onChange={search}></input>
+        </>
     )
 }

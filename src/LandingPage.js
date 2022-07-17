@@ -27,7 +27,7 @@ export default function LandingPage() {
         )
     .catch(err => console.log(err));    
     }
-    console.log(recipes);
+    //console.log(recipes);
 
   return (
     <div className="recipes">

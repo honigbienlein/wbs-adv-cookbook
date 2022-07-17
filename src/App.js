@@ -12,6 +12,7 @@ import Legal from './Legal.js';
 import PrivacyPolicy from './PrivacyPolicy.js';
 import TermsOfUse from './TermsOfUse.js';
 import LandingPage from './LandingPage.js';
+import SearchResult from './SearchResult';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path='/legal/termsofuse' element={<TermsOfUse />} />
           <Route path='/legal/privacypolicy' element={<PrivacyPolicy />} />
           <Route path='/legal' element={<Legal />} />
+          <Route path='/search' element={<SearchResult />} />
           <Route path='/' element={<LandingPage />} />
         </Routes>
         <Authors />

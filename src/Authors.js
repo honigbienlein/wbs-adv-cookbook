@@ -30,7 +30,7 @@ export default function Authors(){
 
     return(
         <div className="authors">
-            <h3>Our lovely cookers</h3>
+            <h3>Our lovely chefs</h3>
             <div className="authorlist">
                 {(authors.length > 0) ? 
                 authors.map((author, index) => 
