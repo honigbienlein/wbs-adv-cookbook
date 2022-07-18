@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 // Style
 import "./index.css";
+import TermsofUseIcon from '.TermsofUseIcon.png'
 // Components
 import Footer from './Footer.js';
 import Tags from './Tags';
@@ -36,7 +37,8 @@ export default function App() {
       </main> 
       
       <Footer />
-    
+      <TermsofUseIcon.png />
+
     </div>
   );
 }
