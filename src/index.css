@@ -25,15 +25,14 @@ code {
   height: 60px;;
 }
 
-.Header{
+.header{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.SearchBar{
+.searchBar{
   margin-top: 1em;
-  width: 25%;
   height: 60%;
 }
 

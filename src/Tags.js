@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./index.css";
 
-export default function Tags({tags=null}){
+export default function Tags({tags}){
 
-    tags=["Frühstück","Mittagessen","Kaffee und Kuchen","Abendbrot",
-          "Indisch","Japanisch","Indonesisch","Bayrisch","Schwäbisch",
-          "Deutsch","Vegetarisch","Vegan"]
-
-    return(
+    return (
         <div className="tags">
-            {/* Option: 2 in a row */} 
-            {tags.map((tag, index) => (<Link key={index} to="/" className="hashtag">#{tag}</Link>))}
+            <h3>Our lovely Tags</h3>
+            <div className="tagList"></div>
+            {(tags.length > 0) ? 
+                tags.map((tag, index) => 
+                    (<Link key={index} to={`/search/tag/${tag}`} className="hashtag">{`#${tag}`}</Link>)
+                )
+            : ""}
         </div>
     )
 }
