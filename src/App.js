@@ -83,8 +83,8 @@ export default function App() {
           <Route path='/legal/terms' element={<TermsOfUse />} />
           <Route path='/legal/privacy' element={<PrivacyPolicy />} />
           <Route path='/legal' element={<Legal />} />
-          <Route path='/search/tag/:find' element={<SearchTag setSearch={setSearch} recipes={recipes} setRecipes={setRecipes} />} />
-          <Route path='/search/:find' element={<SearchResult setSearch={setSearch} /* recipes={recipes} setRecipes={setRecipes} *//>} />
+          <Route path='/search/tag/:find' element={<SearchTag />} />
+          <Route path='/search/:find' element={<SearchResult />} />
           <Route path='/' element={<LandingPage recipes={recipes} />} />
         </Routes>
         <Authors authors={authors} search={search} setSearch={setSearch}/>
