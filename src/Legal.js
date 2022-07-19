@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import TermsofUseIcon from '.TermsofUseIcon.png'
 
 export default function Legal () {
 
@@ -13,7 +12,8 @@ export default function Legal () {
 
                     <div>
                          <Link to='/legal/terms'className="link-legal">Terms of Use</Link>
-                         <img scr={TermsofUseIcon} alt="Handshake" />;
+                    </div>
+                    <div> 
                     </div>
                 </div>
             </div>  
