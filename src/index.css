@@ -25,15 +25,14 @@ code {
   height: 60px;
 }
 
-.Header{
+.header{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.SearchBar{
+.searchBar{
   margin-top: 1em;
-  width: 25%;
   height: 60%;
 }
 
@@ -113,4 +112,25 @@ margin-bottom: 0.3rem;
   width: 6%;
   margin: auto;
   display: flex;
+  
+.card{
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 1rem;
+  width: 12.5rem;
+  background-color: rgb(27, 24, 24);
+}
+
+.recipeImg{
+  width: 200px;
+  height: 150px;;
+}
+
+.title{
+  margin: 0.5rem;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
 }
