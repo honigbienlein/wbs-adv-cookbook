@@ -4,13 +4,13 @@ export default function PrivacyPolicy () {
 
     return (
 
-        <div>
+        <div className='legal'>
 
-            <h2>Privacy Policy</h2>
+            <h1>Privacy Policy</h1>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit. Viverra nam libero justo laoreet sit amet cursus sit amet. Semper risus in hendrerit gravida rutrum quisque non. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Ut consequat semper viverra nam libero justo. Nullam non nisi est sit amet facilisis magna etiam tempor. Sed libero enim sed faucibus turpis in. Bibendum neque egestas congue quisque egestas diam in. Curabitur gravida arcu ac tortor. Ornare lectus sit amet est placerat in. Porttitor rhoncus dolor purus non enim praesent. Vel pharetra vel turpis nunc eget lorem dolor. Egestas sed tempus urna et pharetra pharetra. Facilisis leo vel fringilla est ullamcorper eget. Donec enim diam vulputate ut. Tincidunt dui ut ornare lectus sit amet est. Potenti nullam ac tortor vitae purus. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris.</p>
             
-            <h3>Egestas pretium</h3>
+            <h2>Egestas pretium</h2>
                
                 <p>Orci porta non pulvinar neque. Volutpat est velit egestas dui id ornare arcu odio ut. Lectus quam id leo in vitae turpis massa sed elementum. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Et leo duis ut diam quam nulla porttitor massa. Dolor sed viverra ipsum nunc aliquet. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ac auctor augue mauris augue. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Quis risus sed vulputate odio ut. Ultrices vitae auctor eu augue ut. Risus feugiat in ante metus dictum at tempor commodo. A iaculis at erat pellentesque adipiscing commodo. Tortor pretium viverra suspendisse potenti. Est placerat in egestas erat imperdiet sed. Pretium vulputate sapien nec sagittis aliquam malesuada. Lectus quam id leo in vitae turpis massa.</p>
                      

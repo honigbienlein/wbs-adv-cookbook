@@ -22,7 +22,7 @@ code {
 
 .logo {
   width: 60px;
-  height: 60px;;
+  height: 60px;
 }
 
 .header{
@@ -62,16 +62,17 @@ code {
 }
 
 .link-footer{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: grey;
   text-decoration: none;
-  margin: 1rem 0.3rem;
+  margin: 1rem 0.2rem 0.5rem 0.3rem;
 }
 
 .footer-copyright{
 font-size: 0.5rem;
 color: red;
 text-align: center;
+margin-bottom: 0.3rem;
 }
 
 .links{
@@ -103,6 +104,15 @@ text-align: center;
   text-align: center;
 }
 
+.legal{
+  margin: 0 7rem;
+}
+
+.LegalIcon{
+  width: 6%;
+  margin: auto;
+  display: flex;
+  
 .card{
   border-style: solid;
   border-width: 2px;
