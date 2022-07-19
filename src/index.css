@@ -112,7 +112,8 @@ margin-bottom: 0.3rem;
   width: 6%;
   margin: auto;
   display: flex;
-  
+}
+
 .card{
   border-style: solid;
   border-width: 2px;
