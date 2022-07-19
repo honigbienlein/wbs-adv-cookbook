@@ -22,7 +22,7 @@ code {
 
 .logo {
   width: 60px;
-  height: 60px;;
+  height: 60px;
 }
 
 .Header{
@@ -105,3 +105,12 @@ margin-bottom: 0.3rem;
   text-align: center;
 }
 
+.legal{
+  margin: 0 7rem;
+}
+
+.LegalIcon{
+  width: 6%;
+  margin: auto;
+  display: flex;
+}

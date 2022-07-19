@@ -4,7 +4,7 @@ export default function PrivacyPolicy () {
 
     return (
 
-        <div>
+        <div className='legal'>
 
             <h1>Privacy Policy</h1>
 
