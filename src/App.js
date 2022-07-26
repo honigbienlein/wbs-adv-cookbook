@@ -16,20 +16,22 @@ import SearchTag from './SearchTag';
 
 export default function App() {
   
-  const contentful = require("contentful");
+/*   const contentful = require("contentful");
   const client = contentful.createClient({
     space: 'f5m18cklnsqx',
     accessToken: 'Pi0BGhsNg6RVKjHAICEns6PsCysyVGm6k3wYRqT_mc0'
-  });
+  }); */
+  
   const [recipes, setRecipes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [tags, setTags] = useState([]);
   const [search, setSearch] = useState("");
 
   if(recipes.length === 0){
-      client
-      .getEntries()
+    fetch('127.0.0.1:8000')
+      .then((res) => res.json())
       .then( (res) =>{
+        console.log(res);
         const recipesList = res.items.filter((item) => {
           if(item.fields && item.fields.recipeName) {
               return item;
