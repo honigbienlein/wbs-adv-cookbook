@@ -16,48 +16,51 @@ import SearchTag from './SearchTag';
 
 export default function App() {
   
-  const contentful = require("contentful");
+/*   const contentful = require("contentful");
   const client = contentful.createClient({
     space: 'f5m18cklnsqx',
     accessToken: 'Pi0BGhsNg6RVKjHAICEns6PsCysyVGm6k3wYRqT_mc0'
-  });
+  }); */
+  
   const [recipes, setRecipes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [tags, setTags] = useState([]);
   const [search, setSearch] = useState("");
 
-  if(recipes.length === 0){
-      client
-      .getEntries()
-      .then( (res) =>{
-        const recipesList = res.items.filter((item) => {
-          if(item.fields && item.fields.recipeName) {
-              return item;
-          }
-          return null;
-        }) 
-        setRecipes(recipesList);
+  fetch('http://127.0.0.1:8000/data')
+    .then(res => {
+      //console.log(res);
+      return res.json()})
+    .then(res => {
+      //console.log(res);
+      if(recipes.length === 0){
+      const recipesList = res.items.filter((item) => {
+        if(item.fields && item.fields.recipeName) {
+            return item;
+        }
+        return null;
+      }) 
+      console.log(recipesList);
+      setRecipes(recipesList);
 
-        const authorsList = res.items.filter((item) => {
-          if(item.fields && item.fields.nickname) {
-              return item;
-          }
-          return null
-        })
-        setAuthors(authorsList);
+      const authorsList = res.items.filter((item) => {
+        if(item.fields && item.fields.nickname) {
+            return item;
+        }
+        return null
+      })
+      setAuthors(authorsList);
 
-        const tagsList = [];
-        res.items.filter((item) => {
-          if(item.fields && item.fields.tags) {
-              return item.fields.tags.map((tag) => !tagsList.includes(tag) ? tagsList.push(tag) : null);
-          }
-          return null
-        })
-        setTags(tagsList);
-      }
-      )
-  .catch(err => console.log(err));    
-  }
+      const tagsList = [];
+      res.items.filter((item) => {
+        if(item.fields && item.fields.tags) {
+            return item.fields.tags.map((tag) => !tagsList.includes(tag) ? tagsList.push(tag) : null);
+        }
+        return null
+      })
+      setTags(tagsList);  
+}})
+
   //console.log(recipes);
 
   const find = (event) =>{

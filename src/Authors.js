@@ -11,7 +11,7 @@ export default function Authors({authors}){
                     authors.map((author, index) => 
                         (<div className="author" key={index}>
                             <p className="nickname">{author.fields.nickname}</p>
-                            <img src={author.fields.profilePicture.fields&&author.fields.profilePicture.fields.file.url} alt="profilePicture" width="40px" height="40px"/>
+                            <img src={`http://127.0.0.1:8000/images/profimages/${author.fields.profilePicture&&author.fields.profilePicture.fileName}`} alt="profilePicture" width="40px" height="40px"/>
                         </div>)
                     ) 
                 : ''}
@@ -19,5 +19,3 @@ export default function Authors({authors}){
         </div>
     )
 }
-
-//usestate authors ternary operator
