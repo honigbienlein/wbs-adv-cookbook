@@ -15,6 +15,7 @@ export default function SearchResult() {
     useEffect(()=>{
         if(recipes.length === 0){
             client.getEntries().then( (res) =>{
+                console.log(res);
                 const recipesList = res.items.filter((item) => {
                     if(item.fields.recipeName && item.fields.recipeName.includes(toFind)) {
                         console.log(item.fields.recipeName.includes(toFind))
