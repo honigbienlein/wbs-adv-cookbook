@@ -11,7 +11,7 @@ export default function LandingPage({recipes}) {
         {(recipes.length > 0) ? 
           recipes.map((recipe, index) => (
             <Card className="card" key={index}>
-              <Card.Img className="recipeImg" variant="top" src={recipe.fields.picture[0]&&recipe.fields.picture[0].fields.file.url} />
+              <Card.Img className="recipeImg" variant="top" src='' /* {recipe.fields.picture[0]&&recipe.fields.picture[0].fields.file.url} */ />
               <Card.Body>
                 <Card.Title className="title">{recipe.fields.recipeName}</Card.Title>
                 <Button className="button" variant="primary">Go to recipe</Button>

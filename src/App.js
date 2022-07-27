@@ -27,39 +27,40 @@ export default function App() {
   const [tags, setTags] = useState([]);
   const [search, setSearch] = useState("");
 
-  if(recipes.length === 0){
-    fetch('127.0.0.1:8000')
-      .then((res) => res.json())
-      .then( (res) =>{
-        console.log(res);
-        const recipesList = res.items.filter((item) => {
-          if(item.fields && item.fields.recipeName) {
-              return item;
-          }
-          return null;
-        }) 
-        setRecipes(recipesList);
+  fetch('http://127.0.0.1:8000/data')
+    .then(res => {
+      //console.log(res);
+      return res.json()})
+    .then(res => {
+      //console.log(res);
+      if(recipes.length === 0){
+      const recipesList = res.items.filter((item) => {
+        if(item.fields && item.fields.recipeName) {
+            return item;
+        }
+        return null;
+      }) 
+      console.log(recipesList);
+      setRecipes(recipesList);
 
-        const authorsList = res.items.filter((item) => {
-          if(item.fields && item.fields.nickname) {
-              return item;
-          }
-          return null
-        })
-        setAuthors(authorsList);
+      const authorsList = res.items.filter((item) => {
+        if(item.fields && item.fields.nickname) {
+            return item;
+        }
+        return null
+      })
+      setAuthors(authorsList);
 
-        const tagsList = [];
-        res.items.filter((item) => {
-          if(item.fields && item.fields.tags) {
-              return item.fields.tags.map((tag) => !tagsList.includes(tag) ? tagsList.push(tag) : null);
-          }
-          return null
-        })
-        setTags(tagsList);
-      }
-      )
-  .catch(err => console.log(err));    
-  }
+      const tagsList = [];
+      res.items.filter((item) => {
+        if(item.fields && item.fields.tags) {
+            return item.fields.tags.map((tag) => !tagsList.includes(tag) ? tagsList.push(tag) : null);
+        }
+        return null
+      })
+      setTags(tagsList);  
+}})
+
   //console.log(recipes);
 
   const find = (event) =>{
