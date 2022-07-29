@@ -14,7 +14,7 @@ import LandingPage from './LandingPage.js'
 import SearchResult from './SearchResult'
 import SearchTag from './SearchTag'
 
-export const url = "http://127.0.0.1:8000/"
+export const url = "https://nicecookbook.herokuapp.com/"
 export const urlData = `${url}data`
 export const urlImages = `${url}images/`
 export const urlProfileImages = `${urlImages}profimages/`
