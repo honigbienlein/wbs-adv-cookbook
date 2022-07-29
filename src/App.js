@@ -14,8 +14,10 @@ import LandingPage from './LandingPage.js'
 import SearchResult from './SearchResult'
 import SearchTag from './SearchTag'
 
-export const urlImages = "http://127.0.0.1:8000/images/"
-export const urlProfileImages = "http://127.0.0.1:8000/images/profimages/"
+export const url = "http://127.0.0.1:8000/"
+export const urlData = `${url}data`
+export const urlImages = `${url}images/`
+export const urlProfileImages = `${urlImages}profimages/`
 
 export default function App() {
   
@@ -30,7 +32,7 @@ export default function App() {
   
   useEffect(()=> handleSearch(test, test2),[test2])
 
-  fetch('http://127.0.0.1:8000/data')
+  fetch(urlData)
     .then(res => {
       //console.log(res);
       return res.json()})
