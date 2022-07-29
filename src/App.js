@@ -84,10 +84,8 @@ export default function App() {
     }
     // handle search recipeName and description
     if(recipes.length !== 0 && para1==="search"){
-      const [authorId] = authors.filter((item) => item.fields.nickname===para2)
-      const id = authorId.fields.author_Id
       recipesList = recipes.filter((item) => {
-      if(item.fields && (item.fields.description.includes(para2) || item.fields.recipeName.includes(para2) || (item.fields.author_Id.fields.author_Id === id))) {
+      if(item.fields && (item.fields.description.includes(para2) || item.fields.recipeName.includes(para2) )) {
           return item.fields;
       }
       return null;
