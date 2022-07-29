@@ -56,9 +56,17 @@ code {
   display:inline-block;
 }
 
+.authorLink{
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: antiquewhite;
+  width: 100%;
+  display:inline-block;
+}
+
 .footer{
- margin: auto;
- width: 1080px;
+  margin: auto;
+  width: 1080px;
 }
 
 .link-footer{
@@ -79,9 +87,9 @@ margin-bottom: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
- }
+}
 
- .link-legal{
+.link-legal{
   font-size: 3rem;
   color: grey;
   text-decoration: none;
@@ -93,7 +101,7 @@ margin-bottom: 0.3rem;
 
 .author{
   display: flex;
-  margin: 1rem;
+  margin: 0.1rem;
   justify-content: space-between;
 }
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { urlProfileImages } from './App';
 
 export default function Authors({authors}){
 
@@ -9,10 +11,14 @@ export default function Authors({authors}){
             <div className="authorList">
                 {(authors.length > 0) ? 
                     authors.map((author, index) => 
-                        (<div className="author" key={index}>
-                            <p className="nickname">{author.fields.nickname}</p>
-                            <img src={`http://127.0.0.1:8000/images/profimages/${author.fields.profilePicture&&author.fields.profilePicture.fileName}`} alt="profilePicture" width="40px" height="40px"/>
-                        </div>)
+                        (
+                        <Link key={index} className="authorLink" to={`/search/recipes/${author.fields.nickname}`}>
+                            <div className="author">
+                                <p className="nickname">{author.fields.nickname}</p>
+                                <img src={`${urlProfileImages}${author.fields.profilePicture.fields&&author.fields.profilePicture.fields.file.fileName}`} alt="profilePicture" width="40px" height="40px"/>
+                            </div>
+                        </Link>
+                        )
                     ) 
                 : ''}
             </div>
