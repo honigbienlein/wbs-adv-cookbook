@@ -22,7 +22,7 @@ export const urlProfileImages = `${urlImages}profimages/`
 export default function App() {
   
   const location = useLocation()
-  const [test, test2] = location.pathname.split("/").slice(-2)
+  const [partPath, toSearch] = location.pathname.split("/").slice(-2)
   
   const [recipes, setRecipes] = useState([])
   const [searchedRecipes, setSearchedRecipes] = useState([])
@@ -30,7 +30,7 @@ export default function App() {
   const [tags, setTags] = useState([])
   const [search, setSearch] = useState("")
   
-  useEffect(()=> handleSearch(test, test2),[test2])
+  useEffect(()=> useSearch(partPath, toSearch),[toSearch])
 
   fetch(urlData)
     .then(res => {
@@ -68,7 +68,7 @@ export default function App() {
 
   
   
-  const handleSearch = (para1, para2) => {
+  const useSearch = (para1, para2) => {
     let recipesList
     // handle search tag
     if(recipes.length !== 0 && para1==="tag"){
@@ -108,7 +108,7 @@ export default function App() {
     }
   }
 
-  const toSearch = (event) =>{
+  const handleSearch = (event) =>{
     const input = event.target.value;
     setSearch(input);
   };
@@ -118,7 +118,7 @@ export default function App() {
       <header className="header">
         <Link to="/"><img alt="logoCookbook" className="logo" src={ require('./images/logo.png') } /></Link>
         <div>
-            <input className="searchBar" type="text" onChange={toSearch} value={search}></input>
+            <input className="searchBar" type="text" onChange={handleSearch} value={search}></input>
             <Link className='btn' to={`/search/${search}`}><button>Search</button></Link> 
         </div>
         <img alt="userProfile" className="profile" src={ require('./images/userProfile.png') } /> 
