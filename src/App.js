@@ -82,9 +82,10 @@ export default function App() {
     }
     // handle search recipeName and description
     if(recipes.length !== 0 && para1==="search"){
+      const [authorId] = authors.filter((item) => item.fields.nickname===para2)
+      const id = authorId.fields.author_Id
       recipesList = recipes.filter((item) => {
-      if(item.fields && (item.fields.description.includes(para2) || item.fields.recipeName.includes(para2))) {
-          console.log(item.fields.tags)
+      if(item.fields && (item.fields.description.includes(para2) || item.fields.recipeName.includes(para2) || (item.fields.author_Id.fields.author_Id === id))) {
           return item.fields;
       }
       return null;
@@ -97,9 +98,7 @@ export default function App() {
       const [authorId] = authors.filter((item) => item.fields.nickname===para2)
       const id = authorId.fields.author_Id
       recipesList = recipes.filter((item) => {
-        console.log(item)
         if(item.fields.author_Id.fields && (item.fields.author_Id.fields.author_Id === id)) {
-          console.log(item.fields.author_Id)
           return item.fields;
       }
       return null;

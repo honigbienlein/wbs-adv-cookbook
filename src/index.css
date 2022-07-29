@@ -45,7 +45,7 @@ code {
 .tags{
   max-width: 20%;
   margin-left: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .hashtag{
@@ -108,7 +108,7 @@ margin-bottom: 0.3rem;
 .authors{
   width: 20%;
   margin-right: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -142,4 +142,7 @@ margin-bottom: 0.3rem;
 .button{
   display: flex;
   justify-content: center;
+}
+.recipes{
+  margin-top: 3rem;
 }
